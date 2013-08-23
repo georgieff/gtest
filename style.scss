@@ -1,13 +1,51 @@
+$layout-width: 500px;
+$color-layout: #3bbfce;
+
 body {
   background: gray;
 }
 
+%niki {
+  background: red;
+}
+
+@mixin border-radius ($a){
+  border-radius: $a;
+}
+
 .pe6o {
+  width: $layout-width;
   display: inline-block;
-  width: 50px;
+  padding: 20px;
+  background: darken($color-layout, 30%);
+  -moz-box-sizing: border-box;
+  @include border-radius(10px);
+
+  margin: {
+    top: 10px;
+    bottom: 20px;
+  }
 
   a {
     color: green;
     font-size: 15px;
+
+    &:hover {
+      color: blue;
+    }
+
+    > span {
+      font-size: 100px;
+    }
+
   }
+
+  div {
+    @extend %niki;
+    width: $layout-width - 40;
+  }
+}
+
+input {
+  @extend %niki;
 }

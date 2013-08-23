@@ -1,9 +1,24 @@
 body {
   background: gray; }
 
+.pe6o div, input {
+  background: red; }
+
 .pe6o {
+  width: 500px;
   display: inline-block;
-  width: 50px; }
+  padding: 20px;
+  background: #16535a;
+  -moz-box-sizing: border-box;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px; }
   .pe6o a {
     color: green;
     font-size: 15px; }
+    .pe6o a:hover {
+      color: blue; }
+    .pe6o a > span {
+      font-size: 100px; }
+  .pe6o div {
+    width: 460px; }
